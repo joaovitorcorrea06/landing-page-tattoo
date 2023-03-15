@@ -1,9 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -23,4 +28,180 @@ a {
     color: white;
     background: black;
   }
+}
+
+
+.top-to-btm{
+  position: relative;
+}
+.icon-position{
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  z-index: 20;
+}
+.icon-style{
+  background-color: #d926a9;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  animation: movebtn 3s ease-in-out infinite;
+  transition: all .5s ease-in-out;
+}
+.icon-style:hover{
+  animation: none;
+  background: #fff;
+  color: #d926a9;
+  border: 2px solid #d926a9;
+}
+@keyframes movebtn {
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(20px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  75%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+
+#section6card1{
+  animation: loadingLeft 1.2s ease-in normal;
+}
+#section6card2{
+  animation: loadingCenter 1.2s ease-in normal;
+}
+#section6card3{
+  animation: loadingRight 1.2s ease-in normal;
+}
+#section5img1{
+  animation: loadingLeft 1.2s ease-in normal;
+}
+#section5img2{
+  animation: loadingRight 1.2s ease-in normal;
+}
+#section5img3{
+  animation: loadingLeft 1.2s ease-in normal;
+}
+#section4Img1{
+  animation: loadingBottom 1.2s ease-in normal;
+}
+#section3Img1{
+  animation: loadingCenter 1s ease-in normal;
+}
+#section2Img1{
+  animation: loadingBottom 1s ease-in normal;
+}
+#section2Img2{
+  animation: loadingBottom 1.5s ease-in normal;
+}
+#section2Img3{
+  animation: loadingBottom 2s ease-in normal;
+}
+
+@keyframes loadingLeft {
+	0% {
+		transform: translateX(-50px);
+    opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+    opacity: 1;
+
+	}
+}
+
+@keyframes loadingRight {
+	0% {
+		transform: translateX(50px);
+    opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+    opacity: 1;
+
+	}
+}
+
+@keyframes loadingBottom {
+	0% {
+		transform: translateY(100px);
+    opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+    opacity: 1;
+	}
+}
+
+@keyframes loadingCenter {
+	0% {
+		/* transform: translateY(100px); */
+    opacity: 0;
+    scale: .8;
+	}
+	100% {
+		/* transform: translateY(0); */
+    opacity: 1;
+    scale: 1;
+	}
+}
+
+.commentHover{
+  transition: all .7s ease-in-out;
+  padding: 2rem;
+  border-radius: 50px;
+}
+
+.commentHover:hover{
+  scale: 1.1;
+  background-color: #d926a9;
+  border: 2px solid #eee;
+}
+
+.section5Hover{
+  transition: all .7s ease-in-out;
+  border-radius: 10px;
+}
+
+.section5Hover:hover{
+  scale: 1.1;
+  background-color: #c1c9da;
+}
+
+.section3Hover{
+  transition: all .7s ease-in-out;
+  border-radius: 10px;
+}
+
+.section3Hover:hover{
+  scale: 1.1;
+  background-color: #3e4759;
+}
+
+.sectionTitle {
+  position: relative;
+  font-size: 3rem;
+  z-index: 10;
+}
+
+.section6Hover{
+  transition: all .2s ease-in-out;
+  border-radius: 15px;
+}
+
+.section6Hover:hover{
+  scale: 1.1;
+  border: 5px solid #d926a9;
 }
